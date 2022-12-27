@@ -1,0 +1,33 @@
+/********* TAG SELECTOR *********/
+body {
+    background-color: #000000;
+    color: #f0e3e3;
+}
+
+h1 {
+    color: blueviolet;
+    background-color: thistle;
+}
+
+img:hover {
+    /* add border to image when mouse hovers over it */
+    border: 5px solid red;
+}
+
+/********* CLASS SELECTOR *********/
+.swords {
+    margin: 10px;
+    /* add frame to image */
+    border: 5px solid gray;
+}
+
+.wado {
+    /* add shadow to image*/
+    box-shadow: 5px 5px 5px white;
+}
+
+/********* ID SELECTOR *********/
+#yo {
+    color: blanchedalmond;
+    font-weight: bold;
+}
