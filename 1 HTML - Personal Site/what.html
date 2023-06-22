@@ -35,6 +35,15 @@
             console.log("Sanctuary Guardian by Earthbound Music");
             audio.volume = audio.volume + 0.2;
             audio.play();
+
+            var ilkDiv = document.querySelector('body div:first-child');
+            ilkDiv.style.backgroundColor = 'red';
+            var yeniDiv = document.createElement('div');
+            yeniDiv.classList.add("box");
+            yeniDiv.textContent = 'hey';
+            yeniDiv.appendChild(ilkDiv);
+            document.body.add(yeniDiv)
+
         });
     </script>
 
