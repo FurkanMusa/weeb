@@ -1,3 +1,3 @@
 # weeb
 
-https://furkanmusa.github.io/
+Training
