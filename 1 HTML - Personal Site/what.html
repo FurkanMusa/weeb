@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>What !?</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <audio id="diridiridi">
+        <source src="./img/SanctuaryGuardianSoundEffect.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div id="yes" class="container center">
+        <div class="box">
+            <div class="box">
+                <img src="https://picsum.photos/500/300" alt="sanji be like" style="border: 2px solid white" />
+                <h1 style="color: white;">WHAT</h1>
+            </div>
+            <h1 style="color: white;">HOW</h2>
+        </div>
+    </div>
+
+    <script>
+        var audio = document.getElementById("diridiridi");
+        audio.volume = 0.1;
+
+        document.getElementById("yes").addEventListener('click', function () {
+            console.log("Sanctuary Guardian by Earthbound Music");
+            audio.volume = audio.volume + 0.2;
+            audio.play();
+        });
+    </script>
+
+</body>
+
+</html>
