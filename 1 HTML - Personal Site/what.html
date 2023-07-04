@@ -7,44 +7,112 @@
     <title>What !?</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../goblin.ico">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
 
-    <audio id="diridiridi">
-        <source src="./img/SanctuaryGuardianSoundEffect.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <div id="yes" class="container center">
-        <div class="box">
-            <div class="box">
-                <img src="https://picsum.photos/500/300" alt="sanji be like" style="border: 2px solid white" />
-                <h1 style="color: white;">WHAT</h1>
-            </div>
-            <h1 style="color: white;">HOW</h2>
-        </div>
+    <div id="yes" class="image-container container center">
+        <!-- <img src="https://picsum.photos/200/100" alt="sanji be like" style="border: 2px solid white" /> -->
+        <img src="./img/eye.webp" type="image/webp" alt="gif loop" style="border: 2px solid white" />
+        <div class="circle-big"></div>
     </div>
 
-    <script>
-        var audio = document.getElementById("diridiridi");
-        audio.volume = 0.1;
 
-        document.getElementById("yes").addEventListener('click', function () {
-            console.log("Sanctuary Guardian by Earthbound Music");
-            audio.volume = audio.volume + 0.2;
+    <script>
+
+        var counter = 1;
+        var limit = 10;
+
+
+        var eventListenerWhatify = function () {
+            var audio = new Audio("./img/SanctuaryGuardianSoundEffect.mp3")
+            audio.volume = (counter >= 10) ? (1) : ((counter % 10) / 10);
+            console.log(audio.volume)
+            console.log("Now playing: Sanctuary Guardian by Earthbound Music");
             audio.play();
 
-            var ilkDiv = document.querySelector('body div:first-child');
-            ilkDiv.style.backgroundColor = 'red';
-            var yeniDiv = document.createElement('div');
-            yeniDiv.classList.add("box");
-            yeniDiv.textContent = 'hey';
-            yeniDiv.appendChild(ilkDiv);
-            document.body.add(yeniDiv)
+            let ilkDiv = document.querySelector('body div');
+            ilkDiv.removeEventListener('click', eventListenerWhatify);
 
-        });
+            var text = document.createElement('h1');
+            text.style.color = 'white';
+            text.style.alignItems = 'center'
+            text.style.alignContent = 'center'
+            text.style.textAlign = 'center'
+            text.innerHTML = texts[counter++];
+
+
+            let yeniDiv = document.createElement('div');
+            yeniDiv.id = 'yes'
+            yeniDiv.classList.add("box");
+            yeniDiv.appendChild(ilkDiv);
+            yeniDiv.appendChild(text);
+            document.body.append(yeniDiv)
+            yeniDiv.addEventListener('click', eventListenerWhatify);
+
+            if (counter > limit) {
+                yeniDiv.removeEventListener('click', eventListenerWhatify);
+                yeniDiv.innerHTML = "You are not welcome here. Go away."
+                yeniDiv.style.color = 'white';
+                yeniDiv.style.alignItems = 'center'
+                yeniDiv.style.alignContent = 'center'
+                yeniDiv.style.textAlign = 'center'
+                yeniDiv.style.fontSize = 'xx-large'
+                yeniDiv.style.fontWeight = 'bold'
+                yeniDiv.style.fontFamily = 'roboto'
+            }
+        };
+
+        document.getElementById("yes").addEventListener('click', eventListenerWhatify);
+
+
+
+
+        // Soru listesi
+        const texts = [
+            "!?",
+            "WHAT !?",
+            "The",
+            "Hell",
+            "Are",
+            "You",
+            "Doing",
+            "Here",
+            "Go",
+            "Away",
+            "You",
+            "Are",
+            "Not",
+            "Welcome",
+            "Here",
+            "Go",
+            "Away"
+        ];
+
+
+        // Soru döndüren fonksiyon
+        function randomText() {
+            return texts[Math.floor(Math.random() * texts.length)];
+        }
+
+
+
+
+        function nodesToParent(element, parentTagName) {
+            var parentCount = 0;
+
+            while (element.parentNode) {
+                parentCount++;
+                element = element.parentNode;
+                if (element.tagName.toLowerCase() === parentTagName.toLowerCase()) {
+                    break;
+                }
+            }
+
+            return parentCount;
+        }
     </script>
 
 </body>
