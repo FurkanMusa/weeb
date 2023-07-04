@@ -54,7 +54,12 @@
 
             if (counter > limit) {
                 yeniDiv.removeEventListener('click', eventListenerWhatify);
-                yeniDiv.innerHTML = "You are not welcome here. Go away."
+                // yeniDiv.innerHTML = "You are not welcome here. Go away."
+                let linke = document.createElement('a');
+                linke.href = "./index.html"
+                linke.innerHTML = "Go away."
+                yeniDiv.innerHTML = "You are not welcome here. "
+                yeniDiv.appendChild(linke)
                 yeniDiv.style.color = 'white';
                 yeniDiv.style.alignItems = 'center'
                 yeniDiv.style.alignContent = 'center'
