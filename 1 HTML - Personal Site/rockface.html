@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="darkreader-lock">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <title>Mondrian Project</title>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cinzel', serif;
+      font-size: 60vw;
+      /* font-size: clamp(100px, 1000px, 10000px); */
+    }
+
+    button {
+      position: absolute;
+      right: 3rem;
+      bottom: 3rem;
+      font-size: 30px;
+      background-color: #F0F1EC;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      width: 90px;
+    }
+
+    body:hover {
+      font-size: 140vw;
+      transition: 4s;
+      transition-delay: 500ms;
+      transition-timing-function: ease;
+    }
+
+    body:hover button {
+      background-color: #E72F24;
+      transition: 4s;
+      transition-delay: 1500ms;
+      transition-timing-function: ease-in-out;
+ 
+      right: 45%;
+      bottom: 45%;
+
+      animation: shake 600ms;
+      animation-delay: 6s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+    }
+
+
+    @keyframes shake {
+      0%   { transform: translate(1px, 1px) rotate(0deg); }
+      10%  { transform: translate(-1px, -2px) rotate(-1deg); }
+      20%  { transform: translate(-3px, 0px) rotate(1deg); }
+      30%  { transform: translate(3px, 2px) rotate(0deg); }
+      40%  { transform: translate(1px, -1px) rotate(1deg); }
+      50%  { transform: translate(-1px, 2px) rotate(-1deg); }
+      60%  { transform: translate(-3px, 1px) rotate(0deg); }
+      70%  { transform: translate(3px, 1px) rotate(-1deg); }
+      80%  { transform: translate(-1px, -1px) rotate(1deg); }
+      90%  { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    @keyframes shakePlus {
+      0%   { transform: translate(3px, 3px) rotate(0deg); }
+      10%  { transform: translate(-3px, -6px) rotate(-3deg); }
+      20%  { transform: translate(-9px, 0px) rotate(3deg); }
+      30%  { transform: translate(9px, 6px) rotate(0deg); }
+      40%  { transform: translate(3px, -3px) rotate(3deg); }
+      50%  { transform: translate(-3px, 6px) rotate(-3deg); }
+      60%  { transform: translate(-9px, 3px) rotate(0deg); }
+      70%  { transform: translate(9px, 3px) rotate(-3deg); }
+      80%  { transform: translate(-3px, -3px) rotate(3deg); }
+      90%  { transform: translate(3px, 6px) rotate(0deg); }
+      100% { transform: translate(3px, -6px) rotate(-6deg); }
+    }
+
+  </style>
+</head>
+
+<body>
+  <button onclick="window.location.href = 'index.html';">↩️</button>
+  <h1>🤨</h1>
+
+</body>
+
+</html>
