@@ -1,34 +1,43 @@
 body {
-    background: #000;
-    font-family: 'Century Gothic', sans-serif;
-    font-size: 14px;
-    color: #666;
-    line-height: 24px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    background-color: gainsboro;
 }
 
-/* Div styles */
-.welcome {
-    background: antiquewhite;
-    background-size: cover;
-    height: 500px;
-    width: 100%;
+.navbar-brand {
+    font-family: 'Lovelyn', sans-serif;
+    font-size: 30px;
+}
+
+.navbar-brand-first-letter {
+    font-family: 'Lovelyn', sans-serif;
+    font-size: 30px;
+}
+
+.nav-item {
+    font-family: 'Lovelyn', sans-serif;                       
+    font-size: 20px;
+}
+
+.btn {
+    font-family: 'Lovelyn', sans-serif;
+    /* font-size: 20px; */
+}
+
+.btn:hover {
+    color: whitesmoke;
+}
+
+.btn-warning {
+    color: whitesmoke;
+}
+
+.my-header-image {
     position: relative;
-    overflow: hidden;
-}
+    display: flex;
+    justify-content: right;
+    align-items: center;
 
-.mid {
-    background: gainsboro;
-    width: 100%;
-    overflow: hidden;
-}
-
-.bottom {
-    background: gray;
-    width: 100%;
-    overflow: hidden;
+    width: 100vh;
+    height: auto;
+    padding: 0;
+    margin: 0;
 }
