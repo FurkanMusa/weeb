@@ -25,6 +25,7 @@
 
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -52,7 +53,7 @@
                             Works
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">These will</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -62,26 +63,32 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <button class="btn btn-outline-warning" type="button">Contact Me</button>
+                    <button class="btn btn-outline-warning" type="submit"
+                        onclick="location.href='mailto:mailto:helloitsmefurki@gmail.com?subject=%5BFR%5D%20-%20insert%20subject%20-'">Contact
+                        Me</button>
                 </form>
             </div>
         </div>
     </nav>
 
 
-
+    <!-- Main section -->
     <section>
-        <div class="px-4 py-5 my-5 text-center">
+        <div class=" px-4 py-5 my-5 text-center">
             <img class="d-block mx-auto mb-4" src="./img/dotted-face.png" alt="" width="auto" height="auto">
             <h1 class="display-5 fw-bold text-body-emphasis">Furk</h1>
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-2">Construction Zone.</p>
-                <p class="lead mb-2">I am a software developer. Normally working for private clients so i make these
+                <p class="lead mb-2">I am a software developer. Normally working for private clients so i
+                    make these
                     websites to give you a understanding of my work.</p>
                 <p class="lead mb-4">Thank You!</p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="btn btn-warning btn-lg px-4 me-md-2">Contact Me</button>
-                    <button type="button" class="btn btn-outline-light btn-lg px-4">Give Feedback</button>
+                    <button type="button" class="btn btn-warning btn-lg px-4 me-md-2"
+                        onclick="location.href='mailto:mailto:helloitsmefurki@gmail.com?subject=%5BFR%5D%20-%20insert%20subject%20-'">Contact
+                        Me</button>
+                    <button type="button" class="btn btn-outline-light btn-lg px-4" data-bs-toggle="modal"
+                        data-bs-target="#reg-modal">Give Feedback</button>
                 </div>
             </div>
         </div>
@@ -93,6 +100,24 @@
         <div class='air air4'></div>
     </section>
 
+    <div id="reg-modal" aria-hidden="true" aria-labelledby="modal-titel" class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1"
+        >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-3 shadow">
+                <div class="modal-body p-4 text-center">
+                    <h5 class="mb-0" id="modal-titel">Enable this setting?</h5>
+                    <p class="mb-0">You can always change your mind in your account settings.</p>
+                </div>
+                <div class="modal-footer flex-nowrap p-0">
+                    <button type="button"
+                        class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end"><strong>Yes,
+                            enable</strong></button>
+                    <button type="button" aria-label="Close" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0"
+                        data-bs-dismiss="modal">No thanks</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -100,11 +125,14 @@
 
 
 
+    <!-- DIVIDER  -->
+    <div class="b-divider-lg"></div>
 
-
-    <!-- FEATURES -->
-    <div class="container px-4 py-5" id="icon-grid">
+    <!-- FEATURES 1 -->
+    <div class="container px-4 pt-5" id="icon-grid">
         <h2 class="custom-font-lovelyn custom-font-size-40 pb-2 border-bottom">Skill Set</h2>
+        <hr>
+        <h2 class="custom-font-lovelyn custom-font-size-30 pb-2 border-bottom">Desktop</h2>
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
             <div class="col d-flex align-items-start">
@@ -138,10 +166,49 @@
         </div>
     </div>
 
+    <!-- DIVIDER  -->
+    <!-- <div class="b-divider-sm"></div> -->
+
+    <!-- FEATURES 2 -->
+    <div class="container px-4 pb-5" id="icon-grid">
+        <h2 class="custom-font-lovelyn custom-font-size-30 pb-2 border-bottom">Web</h2>
+        <hr>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+            <div class="col d-flex align-items-start">
+                <p class="custom-font-size-30 bi text-body-secondary flex-shrink-0 me-3">🌐</p>
+                <div>
+                    <h3 class="custom-font-lovelyn fw-bold mb-0 fs-4 text-body-emphasis">HTML</h3>
+                    <p>Greatest markdown language of all time.</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <p class="custom-font-size-30 bi text-body-secondary flex-shrink-0 me-3">🎨</p>
+                <div>
+                    <h3 class="custom-font-lovelyn fw-bold mb-0 fs-4 text-body-emphasis">CSS</h3>
+                    <p>Does CSS counts as a programming language even?</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <p class="custom-font-size-30 bi text-body-secondary flex-shrink-0 me-3">🅱️</p>
+                <div>
+                    <h3 class="custom-font-lovelyn fw-bold mb-0 fs-4 text-body-emphasis">Bootstrap</h3>
+                    <p>Check this website!</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <p class="custom-font-size-30 bi text-body-secondary flex-shrink-0 me-3">⚛️</p>
+                <div>
+                    <h3 class="custom-font-lovelyn fw-bold mb-0 fs-4 text-body-emphasis">React</h3>
+                    <p>Yes, from facebook yes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-
+    <div class="b-divider-lg"></div>
 
     <!-- FOOTER -->
     <div class="container">
@@ -152,7 +219,7 @@
                         <use xlink:href="#bootstrap"></use>
                     </svg>
                 </a>
-                <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Furk</span>
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Furk, Inc. All rights reserved.</span>
             </div>
 
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
