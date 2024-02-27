@@ -29,6 +29,7 @@ $(".btn").click(function() {
 
 $(".start").click(function() {
     $(".menu-overlay").addClass("invisible");
+    $("#level-title").text("Level 1");
     setTimeout(function(){ nextSequence(); }, 1000);
 });
 
@@ -52,7 +53,7 @@ function nextSequence() {
     // Hile:
     console.log(gamePattern);
 
-    $(".nope-overlay").removeClass("blocker");
+    $(".nope-overlay").removeClass("blockOverlay");
     playAllSequence();
 }
 
@@ -67,10 +68,13 @@ async function playAllSequence() {
         playSound(currentColor);
         setTimeout(function(){ $("#" + currentColor).removeClass("pressed"); }, 200);
 
-        await new Promise(r => setTimeout(r, waitTime));
+        if (i < gamePattern.length - 1) {
+            await new Promise(r => setTimeout(r, waitTime));
+        }
     }
 
-    setTimeout(function(){ $(".nope-overlay").addClass("blocker"); }, waitTime);
+    setTimeout(function(){ $(".nope-overlay").addClass("blockOverlay"); }, 200);
+
 
 }
 
