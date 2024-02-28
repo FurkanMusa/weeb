@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS Test</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #041424;
+        }
+        h1 {
+            text-align: center;
+            color: #c00000;
+        }
+        #name, #age {
+            padding: 4px 10px 4px 10px;
+            border: 2px solid #c00000;
+            background-color: #041424;
+            color: bisque;
+        }
+        #submit {
+            padding: 4px;
+            border: 2px solid #c00000;
+            background-color: #041424;
+            color: bisque;
+        }
+        #submit:hover {
+            border: 2px solid bisque;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="POST">
+        <input type="text" name="name" id="name" placeholder="Full Name">
+        <input type="text" name="age" id="age" placeholder="Age">
+        <input type="submit" id="submit" value="Check">
+    </form>
+</body>
+</html>
