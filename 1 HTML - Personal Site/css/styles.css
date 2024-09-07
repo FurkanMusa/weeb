@@ -1,7 +1,22 @@
 body {
     background-color: #000000;
     color: #f0e3e3;
+    display: flex;
+    flex-direction: column; /* İçeriği yukarıdan aşağı sıralar */
+    justify-content: center; /* İçeriği dikeyde ortalar */
+    align-items: center; /* İçeriği yatayda ortalar */
+    min-height: 100vh; /* Sayfanın yüksekliği kadar yer kaplar */
+    margin: 0;
+    padding: 0 5vw; /* Kenarlardan %5 boşluk bırakır, pencere küçüldükçe azalır */
+    box-sizing: border-box; /* Padding'in dahil edilmesini sağlar */
 }
+
+main {
+    max-width: 1200px; /* Ana içerik için maksimum genişlik */
+    width: 100%; /* Genişliğin pencereye göre ayarlanması */
+    padding: 20px;
+}
+
 
 .centerv {
     border: 5px solid;
